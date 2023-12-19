@@ -3,10 +3,10 @@ import sys
 import math
 from queue import PriorityQueue
 
-# Inisialisasi Pygame
+
 pygame.init()
 
-# Variabel layar
+
 WIDTH, HEIGHT = 800, 800
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("A* Pathfinding Visualization")
@@ -169,7 +169,11 @@ def make_grid(rows, width):
         for j in range(rows):
             spot = Spot(i, j, gap, rows)
             grid[i].append(spot)
+
     return grid
+
+
+
 
 # Menggambar grid
 def draw_grid(win, rows, width):
@@ -202,9 +206,29 @@ def get_clicked_pos(pos, rows, width):
 
 # Fungsi utama
 def main(win, width):
-    ROWS = 80
+    ROWS = 40
     grid = make_grid(ROWS, width)
 
+    grid[1][1].make_barrier()
+    grid[2][1].make_barrier()
+    grid[3][1].make_barrier()
+    grid[4][1].make_barrier()
+    grid[5][1].make_barrier()
+    grid[6][1].make_barrier()
+    grid[7][1].make_barrier()
+    grid[8][1].make_barrier()
+    grid[9][1].make_barrier()
+    grid[10][1].make_barrier()
+
+    grid[1][2].make_barrier()
+    grid[1][3].make_barrier()
+    grid[1][4].make_barrier()
+    grid[1][5].make_barrier()
+
+    grid[2][5].make_barrier()
+    grid[3][5].make_barrier()
+    grid[4][5].make_barrier()
+    
     start = None
     end = None
 
