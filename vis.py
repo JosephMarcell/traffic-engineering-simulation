@@ -20,7 +20,7 @@ BLUE = (0, 0, 255)
 ORANGE = (255, 165, 0)
 GREY = (128, 128, 128)
 PURPLE = (128, 0, 128)
-TURQUOISE = (64, 224, 208)
+DARKBLUE = (0, 0, 139)
 
 # Node class
 class Spot:
@@ -50,7 +50,7 @@ class Spot:
         return self.color == ORANGE
 
     def is_end(self):
-        return self.color == TURQUOISE
+        return self.color == DARKBLUE
 
     def reset(self):
         self.color = WHITE
@@ -68,7 +68,7 @@ class Spot:
         self.color = ORANGE
 
     def make_end(self):
-        self.color = TURQUOISE
+        self.color = DARKBLUE
 
     def make_path(self):
         self.color = PURPLE
